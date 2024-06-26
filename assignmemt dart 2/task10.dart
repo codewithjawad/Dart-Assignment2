@@ -8,17 +8,8 @@ void main() {
     "orange",
     "grape"
   ];
-
-  List<String> uniqueList = [];
-  List<String> seen = [];
-
-  for (String item in originalList) {
-    if (!seen.contains(item)) {
-      uniqueList.add(item);
-      seen.add(item);
-    }
-  }
-
-  print("Original List: $originalList");
-  print("List without Duplicates values: $uniqueList");
+  print(originalList);
+  //print(originalList.toSet());
+  originalList = originalList.toSet().toList();
+  print(originalList);
 }
